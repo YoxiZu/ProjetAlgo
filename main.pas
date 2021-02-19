@@ -5,14 +5,20 @@ type
 var
 	test,test2 : String;
 	a : motsTab;
-	i, nbmots: LongInt;
+	i, nbmots: integer;
 begin
 	readln(test);
 	test2 := CleanMS(test);
 	nbmots := calcV2(test2, a);
-	writeln('LE nombre de mots est : ', nbmots);
 	for i:= 1 to nbmots do
 	begin
 		writeln(a[i]);
 	end;
+	writeln('-------------------');
+	antirepeat(nbmots, a);
+	for i:= 1 to nbmots do
+	begin
+		writeln(a[i]);
+	end;
+	
 end.
